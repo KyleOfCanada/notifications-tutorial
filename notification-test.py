@@ -4,6 +4,7 @@ import requests
 
 # imported web_hook is
 # def web_hook(event):
+#     my_key = 'XXXX'
 #     url = f'https://maker.ifttt.com/trigger/{event}/with/key/{my_key}'
 #     return url
 
