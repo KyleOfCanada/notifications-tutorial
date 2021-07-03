@@ -18,4 +18,4 @@ jobs:
       - name: runScript
         run: Rscript -e 'IFTTT notification.R'
         env:
-          IFTTT_KEY = ${{ secrets.IFTTT_KEY }}
+          IFTTT_KEY: = ${{ secrets.IFTTT_KEY }}
