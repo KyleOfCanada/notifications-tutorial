@@ -1,0 +1,21 @@
+on:
+  workflow_dispatch
+
+name: R_test_notification
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+            ref: main
+            token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: r-lib/actions/setup-r@v1
+      - name: installPackages
+        run: Rscript -e 'install.packages("httr")'
+      - name: runScript
+        run: Rscript -e 'IFTTT notification.R'
+        env:
+          IFTTT_KEY = ${{ secrets.IFTTT_KEY }}
