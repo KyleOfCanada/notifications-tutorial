@@ -2,6 +2,7 @@ library(httr)
 
 
 my_key <- Sys.getenv('IFTTT_KEY') # from a GitHub secret
+print(nchar(my_key))
 event <- 'R_post'
 value1 <- 'test'
 value2 <- 'GitHubAction'
