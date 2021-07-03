@@ -16,6 +16,6 @@ jobs:
       - name: installPackages
         run: Rscript -e 'install.packages("httr")'
       - name: runScript
-        run: Rscript -e 'IFTTT notification.R'
         env:
-          IFTTT_KEY: = ${{ secrets.IFTTT_KEY }}
+          IFTTT_KEY: ${{ secrets.IFTTT_KEY }}
+        run: Rscript -e 'IFTTT notification.R'
