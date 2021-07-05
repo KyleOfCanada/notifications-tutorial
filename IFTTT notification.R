@@ -6,6 +6,7 @@ print(nchar(my_key))
 event <- 'R_post'
 value1 <- 'space+test'
 value2 <- 'GitHub%20Action'
+# either + or a %20 will show up as a space in the notification
 
 webhookURL <- paste0('https://maker.ifttt.com/trigger/', event, '/with/key/', my_key, '?&value1=', value1, '&value2=', value2)
 
